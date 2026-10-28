@@ -1,3 +1,59 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* ========== MODE CLAIR (par défaut) ========== */
+:root {
+  /* Surfaces */
+  --background: #F2F6F3;
+  --card: #FAFCFA;
+  --elevated: #FFFFFF;
+  --border: #D5DFD9;
+
+  /* Texte */
+  --foreground: #121A16;
+  --muted: #4F5F56;
+
+  /* Action principale (vert civique) */
+  --primary: #187A58;
+  --primary-hover: #126347;
+  --primary-foreground: #FFFFFF;
+
+  /* Vérification / en attente (ambre) */
+  --accent: #8A5A00;
+  --accent-surface: #FFF4D6;
+  --accent-border: #E0A526;
+
+  /* États */
+  --success: #1E8A5A;
+  --error: #C62F2F;
+
+  /* Bannière hors-ligne */
+  --offline: #E3EAE6;
+  --offline-foreground: #121A16;
+}
+
+/* ========== MODE SOMBRE ========== */
+.dark:root {
+  --background: #0F1512;
+  --card: #17201C;
+  --elevated: #1E2924;
+  --border: #26332D;
+
+  --foreground: #E8EEEA;
+  --muted: #A6B3AC;
+
+  --primary: #3FB68B;
+  --primary-hover: #359B76;
+  --primary-foreground: #07130E;
+
+  --accent: #F5B83D;
+  --accent-surface: #1E2924;
+  --accent-border: #F5B83D;
+
+  --success: #4CC38A;
+  --error: #FF6B6B;
+
+  --offline: #2A3631;
+  --offline-foreground: #E8EEEA;
+}
