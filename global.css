@@ -2,54 +2,87 @@
 @tailwind components;
 @tailwind utilities;
 
-/* ========== MODE CLAIR (par défaut) ========== */
+/* =========================================================
+   MODE CLAIR (par défaut)
+   Valeurs lues directement dans les maquettes Figma
+   "DémarchesCM – Cameroon Citizen Portal"
+   ========================================================= */
 :root {
   /* Surfaces */
-  --background: #F2F6F3;
-  --card: #FAFCFA;
-  --elevated: #FFFFFF;
-  --border: #D5DFD9;
+  --background: #F6FAF7;          /* fond de page */
+  --card: #FFFFFF;                /* cartes */
+  --elevated: #FFFFFF;            /* modales, barre du bas (blanc à 95 %) */
+  --surface-muted: #F0F5F1;       /* encarts d'information dans une carte */
+  --track: #E5E9E6;               /* pastilles neutres, fond de jauge */
+  --border: #EAEFEB;              /* séparateurs de 1 px */
 
   /* Texte */
-  --foreground: #121A16;
-  --muted: #4F5F56;
+  --foreground: #181D1B;          /* texte principal */
+  --muted: #3F4943;               /* texte secondaire */
+  --subtle: #6F7A73;              /* mentions légales, micro-texte */
 
   /* Action principale (vert civique) */
-  --primary: #187A58;
-  --primary-hover: #126347;
-  --primary-foreground: #FFFFFF;
+  --primary: #00543B;             /* boutons, onglet actif, liens */
+  --primary-hover: #00402D;       /* dérivé : non défini dans Figma */
+  --primary-foreground: #FFFFFF;  /* texte sur un bouton vert */
+  --primary-container: #0B6E4F;   /* interrupteur actif, jauge, en-tête */
+  --primary-tint: rgba(159, 244, 204, 0.4); /* pastilles vertes (ex. "Actif") */
+
+  /* En-tête de l'application */
+  --header: #0B6E4F;
+  --header-foreground: #FFFFFF;
+  --header-muted: #98EDC6;        /* "Officiel", sous-titre */
 
   /* Vérification / en attente (ambre) */
-  --accent: #8A5A00;
-  --accent-surface: #FFF4D6;
-  --accent-border: #E0A526;
+  --accent: #6A4800;              /* texte du badge */
+  --accent-surface: rgba(254, 179, 22, 0.2);
+  --accent-border: #FEB316;       /* contour, pastille de notification */
+
+  /* Couleurs de base de la palette Stitch (secondaire, tertiaire) */
+  --secondary: #F2A900;
+  --tertiary: #1E824C;            /* vert en clair, corail en sombre */
 
   /* États */
-  --success: #1E8A5A;
-  --error: #C62F2F;
+  --success: #1E824C;             /* = tertiaire en clair */
+  --error: #BA1A1A;               /* rouge du bouton "supprimer" en clair */
 
   /* Bannière hors-ligne */
-  --offline: #E3EAE6;
-  --offline-foreground: #121A16;
+  --offline: #E5E9E6;
+  --offline-foreground: #181D1B;
 }
 
-/* ========== MODE SOMBRE ========== */
+/* =========================================================
+   MODE SOMBRE
+   Identique au DESIGN.md et aux maquettes sombres de Figma
+   ========================================================= */
 .dark:root {
   --background: #0F1512;
   --card: #17201C;
   --elevated: #1E2924;
+  --surface-muted: #1E2924;
+  --track: #26332D;
   --border: #26332D;
 
   --foreground: #E8EEEA;
   --muted: #A6B3AC;
+  --subtle: #79847E;              /* dérivé : #A6B3AC à 70 % */
 
   --primary: #3FB68B;
   --primary-hover: #359B76;
   --primary-foreground: #07130E;
+  --primary-container: #3FB68B;
+  --primary-tint: rgba(63, 182, 139, 0.15);
+
+  --header: #1E2924;              /* barre du haut = niveau 2 (DESIGN.md) */
+  --header-foreground: #E8EEEA;
+  --header-muted: #3FB68B;
 
   --accent: #F5B83D;
-  --accent-surface: #1E2924;
-  --accent-border: #F5B83D;
+  --accent-surface: rgba(245, 184, 61, 0.15);
+  --accent-border: rgba(245, 184, 61, 0.3);
+
+  --secondary: #F5B83D;
+  --tertiary: #F2827F;            /* corail : boutons modifier / supprimer */
 
   --success: #4CC38A;
   --error: #FF6B6B;
