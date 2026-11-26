@@ -1,0 +1,136 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Format des valeurs : "H S% L%" (sans hsl()), exigé par Reusables.
+   Le code hexadécimal d'origine est rappelé dans chaque commentaire. */
+
+@layer base {
+  /* =========================================================
+     MODE CLAIR (par défaut)
+     Valeurs lues dans les maquettes Figma "DémarchesCM"
+     ========================================================= */
+  :root {
+    /* Surfaces */
+    --background: 135 28.6% 97.3%;                /* #F6FAF7 fond de page */
+    --card: 0 0% 100%;                            /* #FFFFFF cartes */
+    --popover: 0 0% 100%;                         /* #FFFFFF menus déroulants, select, tooltips */
+    --elevated: 0 0% 100%;                        /* #FFFFFF modales, barre du bas */
+    --surface-muted: 132 20% 95.1%;               /* #F0F5F1 encarts d'information dans une carte */
+    --track: 135 8.3% 90.6%;                      /* #E5E9E6 pastilles neutres, fond de jauge / barre de progression */
+    --border: 132 13.5% 92.7%;                    /* #EAEFEB séparateurs de 1 px, contours de cartes */
+    --input: 135 8.3% 90.6%;                      /* #E5E9E6 contour des champs de saisie (Input, Textarea) */
+
+    /* Texte */
+    --foreground: 156 9.4% 10.4%;                 /* #181D1B texte principal */
+    --card-foreground: 156 9.4% 10.4%;            /* #181D1B texte sur une carte */
+    --popover-foreground: 156 9.4% 10.4%;         /* #181D1B texte dans un menu déroulant */
+    --muted-foreground: 144 7.4% 26.7%;           /* #3F4943 texte secondaire (descriptions, placeholders) */
+    --subtle: 141.8 4.7% 45.7%;                   /* #6F7A73 mentions légales, micro-texte */
+
+    /* Action principale (vert civique) */
+    --primary: 162.1 100% 16.5%;                  /* #00543B boutons, onglet actif, liens */
+    --primary-foreground: 0 0% 100%;              /* #FFFFFF texte sur un bouton vert */
+    --primary-hover: 162.2 100% 12.5%;            /* #00402D bouton vert au survol / appui (dérivé, absent de Figma) */
+    --primary-container: 161.2 81.8% 23.7%;       /* #0B6E4F interrupteur actif, jauge remplie */
+    --primary-tint: 151.8 79.4% 79% / 0.4;        /* rgba    pastilles vertes semi-transparentes (ex. « Actif ») */
+    --ring: 161.2 81.8% 23.7%;                    /* #0B6E4F anneau de focus autour d'un champ ou bouton */
+
+    /* En-tête de l'application */
+    --header: 161.2 81.8% 23.7%;                  /* #0B6E4F fond de la barre du haut */
+    --header-foreground: 0 0% 100%;               /* #FFFFFF texte et icônes de la barre du haut */
+    --header-muted: 152.5 70.2% 76.3%;            /* #98EDC6 « Officiel », sous-titre de l'en-tête */
+
+    /* Neutres des composants */
+    --secondary: 132 20% 95.1%;                   /* #F0F5F1 bouton « secondary » */
+    --secondary-foreground: 156 9.4% 10.4%;       /* #181D1B texte du bouton « secondary » */
+    --muted: 132 20% 95.1%;                       /* #F0F5F1 fond discret (Skeleton, onglets inactifs, Badge neutre) */
+    --accent: 132 20% 95.1%;                      /* #F0F5F1 survol / sélection (bouton ghost, ligne de menu) */
+    --accent-foreground: 156 9.4% 10.4%;          /* #181D1B texte d'un élément survolé */
+
+    /* Vérification / en attente (ambre) */
+    --warning: 40.8 100% 20.8%;                   /* #6A4800 texte du badge « en attente » */
+    --warning-surface: 40.6 99.1% 54.1% / 0.2;    /* rgba    fond du badge (ambre transparent) */
+    --warning-border: 40.6 99.1% 54.1%;           /* #FEB316 contour du badge, pastille de notification */
+    --amber: 41.9 100% 47.5%;                     /* #F2A900 ambre vif de la palette (ex-« secondaire » Figma) */
+
+    /* États */
+    --success: 147.6 62.5% 31.4%;                 /* #1E824C succès, démarche validée */
+    --error: 0 75.5% 41.6%;                       /* #BA1A1A erreur, rouge du bouton « supprimer » */
+    --destructive: 0 75.5% 41.6%;                 /* #BA1A1A bouton / action destructrice (Button variant=destructive) */
+    --destructive-foreground: 0 0% 100%;          /* #FFFFFF texte sur un bouton destructeur */
+    --tertiary: 147.6 62.5% 31.4%;                /* #1E824C vert en clair (= success) */
+
+    /* Bannière hors-ligne */
+    --offline: 135 8.3% 90.6%;                    /* #E5E9E6 fond de la bannière « pas de connexion » */
+    --offline-foreground: 156 9.4% 10.4%;         /* #181D1B texte de la bannière */
+
+    --radius: 0.5rem;                             /* arrondi des composants */
+  }
+
+  /* =========================================================
+     MODE SOMBRE
+     Identique au DESIGN.md et aux maquettes sombres de Figma
+     ========================================================= */
+  .dark:root {
+    /* Surfaces */
+    --background: 150 16.7% 7.1%;                 /* #0F1512 fond de page */
+    --card: 153.3 16.4% 10.8%;                    /* #17201C cartes (un cran plus clair que le fond) */
+    --popover: 152.7 15.5% 13.9%;                 /* #1E2924 menus déroulants, select, tooltips */
+    --elevated: 152.7 15.5% 13.9%;                /* #1E2924 modales, barre du bas */
+    --surface-muted: 152.7 15.5% 13.9%;           /* #1E2924 encarts d'information dans une carte */
+    --track: 152.3 14.6% 17.5%;                   /* #26332D pastilles neutres, fond de jauge */
+    --border: 152.3 14.6% 17.5%;                  /* #26332D séparateurs de 1 px, contours de cartes */
+    --input: 152.3 14.6% 17.5%;                   /* #26332D contour des champs de saisie */
+
+    /* Texte */
+    --foreground: 140 15% 92.2%;                  /* #E8EEEA texte principal */
+    --card-foreground: 140 15% 92.2%;             /* #E8EEEA texte sur une carte */
+    --popover-foreground: 140 15% 92.2%;          /* #E8EEEA texte dans un menu déroulant */
+    --muted-foreground: 147.7 7.9% 67.6%;         /* #A6B3AC texte secondaire (descriptions, placeholders) */
+    --subtle: 147.3 4.3% 49.6%;                   /* #79847E mentions légales, micro-texte (dérivé : texte secondaire à 70 %) */
+
+    /* Action principale (vert civique) */
+    --primary: 158.3 48.6% 48%;                   /* #3FB68B boutons, onglet actif, liens (vert plus clair pour rester lisible) */
+    --primary-foreground: 155 46.2% 5.1%;         /* #07130E texte sur un bouton vert */
+    --primary-hover: 158.2 49% 40.8%;             /* #359B76 bouton vert au survol / appui (dérivé) */
+    --primary-container: 158.3 48.6% 48%;         /* #3FB68B interrupteur actif, jauge remplie */
+    --primary-tint: 158.3 48.6% 48% / 0.15;       /* rgba    pastilles vertes semi-transparentes */
+    --ring: 158.3 48.6% 48%;                      /* #3FB68B anneau de focus */
+
+    /* En-tête de l'application */
+    --header: 152.7 15.5% 13.9%;                  /* #1E2924 fond de la barre du haut (même niveau que « elevated ») */
+    --header-foreground: 140 15% 92.2%;           /* #E8EEEA texte et icônes de la barre du haut */
+    --header-muted: 158.3 48.6% 48%;              /* #3FB68B « Officiel », sous-titre de l'en-tête */
+
+    /* Neutres des composants */
+    --secondary: 152.7 15.5% 13.9%;               /* #1E2924 bouton « secondary » */
+    --secondary-foreground: 140 15% 92.2%;        /* #E8EEEA texte du bouton « secondary » */
+    --muted: 152.7 15.5% 13.9%;                   /* #1E2924 fond discret (Skeleton, onglets inactifs) */
+    --accent: 152.3 14.6% 17.5%;                  /* #26332D survol / sélection (bouton ghost, ligne de menu) */
+    --accent-foreground: 140 15% 92.2%;           /* #E8EEEA texte d'un élément survolé */
+
+    /* Vérification / en attente (ambre) */
+    --warning: 40.1 90.2% 60%;                    /* #F5B83D texte du badge « en attente » */
+    --warning-surface: 40.1 90.2% 60% / 0.15;     /* rgba    fond du badge (ambre transparent) */
+    --warning-border: 40.1 90.2% 60% / 0.3;       /* rgba    contour du badge */
+    --amber: 40.1 90.2% 60%;                      /* #F5B83D ambre vif de la palette */
+
+    /* États */
+    --success: 151.3 49.8% 53.1%;                 /* #4CC38A succès, démarche validée */
+    --error: 0 100% 71%;                          /* #FF6B6B erreur */
+    --destructive: 0 100% 71%;                    /* #FF6B6B bouton / action destructrice */
+    --destructive-foreground: 155 46.2% 5.1%;     /* #07130E texte sur un bouton destructeur */
+    --tertiary: 1.6 81.6% 72.4%;                  /* #F2827F corail en sombre : boutons modifier / supprimer */
+
+    /* Bannière hors-ligne */
+    --offline: 155 12.5% 18.8%;                   /* #2A3631 fond de la bannière */
+    --offline-foreground: 140 15% 92.2%;          /* #E8EEEA texte de la bannière */
+
+    --radius: 0.5rem;                             /* arrondi des composants */
+  }
+}

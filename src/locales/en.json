@@ -1,0 +1,53 @@
+{
+  "home": {
+    "official": "OFFICIAL",
+    "tagline": "Official administrative guide",
+    "updated": "Guides up to date",
+    "offlineReady": "Offline base ready",
+    "sources": "BUNEC & DGSN",
+    "question": "What would you like to do?",
+    "subtitle": "Certified information, step-by-step procedures and legal fees in Cameroon.",
+    "searchPlaceholder": "Search a procedure (e.g. passport)",
+    "categories": "Administrative categories",
+    "poles": "Administrative poles",
+    "polesCount": "6 poles",
+    "domainsCount": "4 areas",
+    "frequent": "Frequent procedures",
+    "popular": "Popular",
+    "seeAll": "View all (42)",
+    "ask": "Ask a question",
+    "offlineActive": "Offline mode active",
+    "offlineData": "0 MB of data used",
+    "updatedBadge": "Up to date",
+    "lawGuaranteed": "Official fees guaranteed",
+    "lawText": "Always require an official Treasury receipt. No informal fee is allowed.",
+    "lawBadge": "LAW",
+    "priority": "Priority procedures",
+    "certified": "Certified instruction sheets",
+    "assistance": "Civil Assistance & Reporting",
+    "assistanceSubtitle": "Free service of the State of Cameroon",
+    "assistanceText": "In case of an illegal tip request or unjustified file blockage, contact the citizen hotline directly.",
+    "number1500": "Line 1500",
+    "police117": "Police 117"
+  },
+  "nav": {
+    "home": "Home",
+    "saved": "My guides",
+    "assistant": "Assistant",
+    "settings": "Settings"
+  },
+  "procedures": {
+    "birth": "Birth certificate",
+    "birthDescription": "Civil registry declaration, copy…",
+    "birthBadge": "Legally free",
+    "birthDeadline": "Time: Immediate to 72h",
+    "identity": "National identity card",
+    "passport": "Ordinary passport",
+    "passportCost": "110,000 FCFA",
+    "passportDescription": "Online pre-registration is required…",
+    "passportDeadline": "Delivery in 48 hours",
+    "criminal": "Judicial record (Bulletin N°3)",
+    "criminalCost": "1,500 FCFA",
+    "criminalDescription": "Issued by the Court Registry…"
+  }
+}

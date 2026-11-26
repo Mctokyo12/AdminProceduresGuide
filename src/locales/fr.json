@@ -1,0 +1,53 @@
+{
+  "home": {
+    "official": "OFFICIEL",
+    "tagline": "Guide administratif officiel",
+    "updated": "Fiches à jour",
+    "offlineReady": "Base hors-ligne prête",
+    "sources": "BUNEC & DGSN",
+    "question": "Que souhaitez-vous faire ?",
+    "subtitle": "Informations certifiées, démarches pas-à-pas et tarifs légaux au Cameroun.",
+    "searchPlaceholder": "Rechercher une démarche (ex. passeport)",
+    "categories": "Catégories administratives",
+    "poles": "Pôles administratifs",
+    "polesCount": "6 pôles",
+    "domainsCount": "4 domaines",
+    "frequent": "Démarches fréquentes",
+    "popular": "Populaires",
+    "seeAll": "Voir tout (42)",
+    "ask": "Poser une question",
+    "offlineActive": "Mode hors-ligne actif",
+    "offlineData": "0 Mo de données consommé",
+    "updatedBadge": "À jour",
+    "lawGuaranteed": "Barème officiel garanti",
+    "lawText": "Exigez toujours votre quittance du Trésor Public. Aucun frais informel n'est toléré.",
+    "lawBadge": "LOI",
+    "priority": "Démarches prioritaires",
+    "certified": "Fiches d'instructions certifiées",
+    "assistance": "Assistance Civique & Dénonciation",
+    "assistanceSubtitle": "Service gratuit de l'État du Cameroun",
+    "assistanceText": "En cas de demande de pourboire illégal ou de blocage injustifié de votre dossier, contactez directement la ligne citoyenne.",
+    "number1500": "Numéro 1500",
+    "police117": "Police 117"
+  },
+  "nav": {
+    "home": "Accueil",
+    "saved": "Mes fiches",
+    "assistant": "Assistant",
+    "settings": "Paramètres"
+  },
+  "procedures": {
+    "birth": "Acte de naissance",
+    "birthDescription": "Déclaration à l'état civil, copie…",
+    "birthBadge": "Légalement gratuit",
+    "birthDeadline": "Délai : Immédiat à 72h",
+    "identity": "Carte nationale d'identité",
+    "passport": "Passeport ordinaire",
+    "passportCost": "110 000 FCFA",
+    "passportDescription": "Pré-enrôlement en ligne obligatoire…",
+    "passportDeadline": "Délivrance 48 heures",
+    "criminal": "Casier judiciaire (Bulletin N°3)",
+    "criminalCost": "1 500 FCFA",
+    "criminalDescription": "Délivré par le Greffe du Tribunal de…"
+  }
+}
