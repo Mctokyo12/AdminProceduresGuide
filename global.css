@@ -59,7 +59,7 @@
     --amber: 41.9 100% 47.5%;                     /* #F2A900 ambre vif de la palette (ex-« secondaire » Figma) */
 
     /* États */
-    --success: 147.6 62.5% 31.4%;                 /* #1E824C succès, démarche validée */
+    --success: 147.6 62.5% 31.4%;                 /* #1E8c24C succès, démarche validée */
     --error: 0 75.5% 41.6%;                       /* #BA1A1A erreur, rouge du bouton « supprimer » */
     --destructive: 0 75.5% 41.6%;                 /* #BA1A1A bouton / action destructrice (Button variant=destructive) */
     --destructive-foreground: 0 0% 100%;          /* #FFFFFF texte sur un bouton destructeur */

@@ -4,21 +4,39 @@ import { router } from 'expo-router';
 import AppHeader from '@/components/layouts/AppHeader';
 import { getTranslations } from '@/locales';
 import { procedures } from '@/features/procedures';
+import {IdCard} from 'lucide-react-native';
+import {
+  Badge, 
+  FlightTakeoff,
+  Domain,
+  DirectionsCar,
+  Gavel ,
+  FamilyRestroom,
+  AssignmentInd,
+  ImportContacts,
+  Policy,
+  ErrorOutline,
+  Search,
+  MicNone,
+  ChatBubbleOutline,
+  VerifiedUser,
+  KeyboardArrowRight
+} from 'google-material-icons/outlined';
 
 const categoryGrid = [
-  ['État civil', 'Naissance, mariages, décès', '▣'],
-  ['Identité & voyage', 'CNI, passeport, visa', '◆'],
-  ['Entreprise', 'Création, fiscalité', '▦'],
-  ['Transport', 'Permis, carte grise', '↗'],
-  ['Justice', 'Casier, judiciaire', '⚖'],
-  ['Famille', 'Tutelle, mariage, succession', '♟'],
+  ['État civil', 'Naissance, mariages, décès', <Badge />],
+  ['Identité & voyage', 'CNI, passeport, visa', <FlightTakeoff />],
+  ['Entreprise', 'Création, fiscalité', <Domain />],
+  ['Transport', 'Permis, carte grise', <DirectionsCar />],
+  ['Justice', 'Casier, judiciaire', <Gavel />],
+  ['Famille', 'Tutelle, mariage, succession', <FamilyRestroom />],
 ] as const;
 
 const polesGrid = [
-  ['État Civil', 'Naissance, Mariage, Décès', '▣'],
-  ['Identité & Voyage', 'CNI, Passeport, Visa', '◆'],
-  ['Justice & Légal', 'Casier, Tribunaux', '⚖'],
-  ['Entreprise & Fiscal', 'Création, Impôts', '▦'],
+  ['État Civil', 'Naissance, Mariage, Décès', <AssignmentInd />],
+  ['Identité & Voyage', 'CNI, Passeport, Visa', <IdCard />],
+  ['Justice & Légal', 'Casier, Tribunaux', <Gavel />],
+  ['Entreprise & Fiscal', 'Création, Impôts', <Domain />],
 ] as const;
 
 export default function HomeScreen() {
@@ -41,7 +59,7 @@ export default function HomeScreen() {
         onPress={() => router.push('/')}
         className="absolute bottom-4 right-4 h-12 flex-row items-center rounded-full bg-primary-container px-4"
       >
-        <Text className="mr-2 text-[16px] text-primary-foreground">▣</Text>
+        <Text className="mr-2 text-[16px] text-primary-foreground"><ChatBubbleOutline /></Text>
         <Text className="text-[14px] font-bold text-primary-foreground">{t.home.ask}</Text>
       </Pressable>
     </View>
@@ -57,7 +75,8 @@ function OverviewView({ t, onPoles }: { t: ReturnType<typeof getTranslations>; o
           <Text className="mr-3 text-[12px] font-semibold leading-4 text-primary">{t.home.updated}</Text>
           <Text className="text-[11px] text-muted-foreground">• {t.home.offlineReady}</Text>
         </View>
-        <View className="rounded-full bg-track px-2.5 py-1">
+        <View className="rounded-full bg-track flex-row items-center gap-2 px-2.5 py-1">
+          <Text className='text-warning'><VerifiedUser size={16} /></Text>
           <Text className="text-[11px] font-semibold text-muted-foreground">{t.home.sources}</Text>
         </View>
       </View>
@@ -73,9 +92,9 @@ function OverviewView({ t, onPoles }: { t: ReturnType<typeof getTranslations>; o
         onPress={() => router.push('/')}
         className="mb-6 h-[52px] flex-row items-center rounded-xl border border-border bg-card px-3"
       >
-        <Text className="mr-3 text-[18px] text-primary">⌕</Text>
+        <Text className="mr-3 text-[18px] text-primary"><Search /></Text>
         <Text className="flex-1 text-[16px] text-subtle">{t.home.searchPlaceholder}</Text>
-        <Text className="text-[18px] text-muted-foreground">🎙</Text>
+        <Text className="text-[18px] text-muted-foreground"><MicNone /></Text>
       </Pressable>
 
       <View className="mb-2 flex-row items-center justify-between">
@@ -134,7 +153,7 @@ function ProcedureCard({ procedure }: { procedure: (typeof procedures)[number] }
       className="min-h-[76px] flex-row items-center rounded-xl border border-border bg-card p-3.5"
     >
       <View className="mr-2 size-9 items-center justify-center rounded-lg bg-surface-muted">
-        <Text className="text-[16px] text-primary">▤</Text>
+        <Text className="text-[16px] text-primary"><procedure.icon/></Text>
       </View>
       <View className="flex-1">
         <Text className="text-[16px] font-bold text-foreground">{procedure.title}</Text>
@@ -148,7 +167,7 @@ function ProcedureCard({ procedure }: { procedure: (typeof procedures)[number] }
         </Text>
         <Text className="mt-1 text-[11px] font-semibold text-subtle">{procedure.duration} • {procedure.sources.join(' / ')}</Text>
       </View>
-      <Text className="ml-2 text-[18px] text-subtle">›</Text>
+      <Text className="ml-2 text-[18px] text-subtle"><KeyboardArrowRight /></Text>
     </Pressable>
   );
 }

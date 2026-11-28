@@ -1,11 +1,12 @@
 import { Pressable, Text, View } from 'react-native';
 import { getTranslations } from '@/locales';
+import {House , FolderPlus , Bot , Settings} from 'lucide-react-native';
 
 const tabs = [
-  { name: 'index', label: 'home', icon: '⌂' },
-  { name: 'saved', label: 'saved', icon: '▤' },
-  { name: 'assistant', label: 'assistant', icon: '◇' },
-  { name: 'setting', label: 'settings', icon: '⚙' },
+  { name: 'index', label: 'home', icon: <House /> },
+  { name: 'saved', label: 'saved', icon: <FolderPlus /> },
+  { name: 'assistant', label: 'assistant', icon: <Bot /> },
+  { name: 'setting', label: 'settings', icon: <Settings /> },
 ] as const;
 
 type BottomNavProps = {

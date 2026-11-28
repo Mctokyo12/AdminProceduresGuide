@@ -1,5 +1,8 @@
 import { Image, Pressable, Text, View } from 'react-native';
-
+import { 
+  PermIdentity,
+  Verified
+} from 'google-material-icons/outlined';
 type Props = {
   onProfilePress: () => void;
 };
@@ -29,7 +32,7 @@ export default function AppHeader({ onProfilePress }: Props) {
         onPress={onProfilePress}
         className="size-8 items-center justify-center rounded-full bg-primary"
       >
-        <Text className="text-[12px] font-bold text-header-foreground">👤</Text>
+        <Text className="text-[12px] font-bold text-header-foreground"><PermIdentity /></Text>
       </Pressable>
     </View>
   );
